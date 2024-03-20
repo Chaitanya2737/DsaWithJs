@@ -4,17 +4,6 @@ let array = [
     [8, 1, 6]
 ]
 
-let countLenght = (array) => {
-    let count =0
-    for (let i = 0; i < array.length; i++) {
-     for (let j = 0; j < array[i].length; j++) {
-        count++
-      
-     }
-        
-    }
-    return count
-}
 let countofRow = (array, rowNum) => {
     let sum = 0
     for (let i = 0; i < array.length; i++) {
@@ -72,7 +61,7 @@ let magicSqr = (array) => {
 
 
 let main = () => {
-  let result =  countLenght(array);
+  let result =  magicSqr(array);
   console.log(result)
 }
 
