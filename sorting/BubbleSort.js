@@ -1,4 +1,4 @@
-let array = [1,2, 6, 8];
+let array = [5,2,7,3];
 for (let i = 0; i < array.length; i++) {
     let flag=  false
     for (let j = 0; j < array.length-i; j++) {

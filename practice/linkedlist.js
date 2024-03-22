@@ -1,62 +1,63 @@
-class Node {
+class Node{
     constructor(data){
-        this.data=  data;
+        this.data= data
         this.next = null
     }
 }
-
-class Linkedlist{
+ class Linkedlist{
     constructor(){
-        this.head = null;
+        this.head = null
     }
 
-    add(data){
-        let newNode = new Node(data);
-        newNode.next = this.head
+    unshift(data){
+        const newNode = new Node(data)
+        newNode.next = this.head;
         this.head=  newNode
     }
 
-    addAtlast(data){
-        let newNode = new Node(data);
-        let current = this.head
+    push(data){
+        let current = this.head;
+        let newNode=  new Node(data)
         while (current.next !== null) {
-            current = current.next
+            current= current.next
         }
-        current.next =  newNode
+        current.next=  newNode
     }
 
-    remove(){
+    shift(){
         this.head = this.head.next
     }
 
-    removeAtLast(){
+    pop(){
         let current = this.head
         while (current.next.next) {
-            current = current.next
+            current=  current.next
         }
         current.next = null
     }
 
-
-    show(){
-        let current = this.head 
-        while(current !==null){
-            console.log(current.data)
-            console.log("↓")
-            current = current.next
-        }
-        console.log(null)
+    display(){
+       let current = this.head;
+       while (current) {
+         console.log(current.data)
+         console.log("↓")
+         current =  current.next
+       }
+       console.log(null)
     }
-}
+ }
 
-const list = new Linkedlist();
-list.add(10)
-list.addAtlast(11)
-list.addAtlast(12)
+ const list = new Linkedlist();
+
+list.unshift(12)
+list.unshift(11)
+list.unshift(10)
+list.unshift(9)
+
+ list.push(100)
+ list.push(102)
+list.shift()
+ list.pop()
 
 
-list.removeAtLast()
-list.show()
-
-
-// 10-> 11 -> 12
+ list.display()
